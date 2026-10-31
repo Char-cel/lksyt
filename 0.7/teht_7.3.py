@@ -10,7 +10,8 @@ while True:
 
     elif toiminto == "hae":
         icao = input("Anna ICAO-koodi: ")
-        print(lentoasemat[icao])
+        if icao in lentoasemat:
+            print(lentoasemat[icao])
 
     elif toiminto == "lopeta":
         break

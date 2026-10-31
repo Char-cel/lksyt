@@ -18,13 +18,13 @@ icao2 = input("Anna toisen lentokentän ICAO-koodi: ").upper()
 
 
 kursori.execute(
-    "SELECT latitude_deg, longitude_deg FROM airport WHERE ident = %s",
-    (icao1,)
+    "SELECT latitude_deg, longitude_deg FROM airport WHERE ident= {icao1} ",
+
 )
 lentokenttä1 = kursori.fetchone()
 
 kursori.execute(
-    "SELECT latitude_deg, longitude_deg FROM airport WHERE ident = %s",
+    "SELECT latitude_deg, longitude_deg FROM airport WHERE ident = {icao2}",
     (icao2,)
 )
 lentokenttä2 = cursor.fetchone()

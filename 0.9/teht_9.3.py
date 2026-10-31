@@ -6,8 +6,8 @@ class Auto:
         self.nopeus = 0
     def kiihdytä(self,muutos):
         self.nopeus = max(min(self.nopeus + muutos, self.huippunopeus),0)
-    def kulje(self,matkustus):
-        self.matka = (self.nopeus * matkustus + self.matka)
+    def kulje(self,aika):
+        self.matka = (self.nopeus * aika + self.matka)
 auto1 = Auto("ABC-123" , 142)
 print(auto1.rekisteritunnus)
 print(auto1.huippunopeus)
